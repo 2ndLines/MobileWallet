@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.hakim.wallet"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //Google
+    compile 'com.google.code.gson:gson:2.5'
+
+    //Android
+    compile 'com.android.support:appcompat-v7:23.1.1'
+
+    //ReactiveX
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+
+    //Class Injection: Dagger2
+    apt "com.google.dagger:dagger-compiler:2.0.2"
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+
+    //View injection : ButterKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    //AutoParcel
+    compile 'com.github.frankiesardo:auto-parcel:0.3.1'
+    apt 'com.github.frankiesardo:auto-parcel-processor:0.3.1'
+
+    //SqlBrite
+    compile 'com.squareup.sqlbrite:sqlbrite:0.5.0'
+
+    //Reactive SharedPreferences
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.1'
+}

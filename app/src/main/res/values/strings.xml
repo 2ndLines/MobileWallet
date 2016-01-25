@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MobileWallet</string>
+    <string name="item_change">零钱</string>
+    <string name="item_tran_card">交通卡</string>
+    <string name="item_bank_card">银行卡</string>
+    <string name="item_quick_pass">闪付卡</string>
+    <string name="fail_to_get_data">获取数据失败</string>
+
+
+    <string-array name="wallet_items">
+        <item>@string/item_change</item>
+        <item>@string/item_tran_card</item>
+        <item>@string/item_bank_card</item>
+        <item>@string/item_quick_pass</item>
+    </string-array>
+
+</resources>
